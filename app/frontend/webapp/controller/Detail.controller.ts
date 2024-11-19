@@ -10,9 +10,9 @@ export default class Detail extends Controller {
   /*eslint-disable @typescript-eslint/no-empty-function*/
   public onInit(): void {
     (this?.getOwnerComponent() as UIComponent)
-      ?.getRouter()
-      ?.getRoute("Detail")
-      ?.attachPatternMatched(this.onRouteMatched.bind(this));
+        ?.getRouter()
+        ?.getRoute("Detail")
+        ?.attachPatternMatched(this.onRouteMatched.bind(this));
   }
 
   private onRouteMatched(event: UI5Event) {
@@ -26,7 +26,7 @@ export default class Detail extends Controller {
 
   public onCloseDetail(): void {
     (this.getOwnerComponent() as UIComponent)
-      .getRouter()
-      .navTo("RouteMaster", {});
+        .getRouter()
+        .navTo("RouteMaster", {});
   }
 }

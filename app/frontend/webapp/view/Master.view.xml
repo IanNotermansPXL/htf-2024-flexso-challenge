@@ -33,10 +33,30 @@
         <f:header>
             <f:DynamicPageHeader id="id.DynamicPageHeader">
                 <f:content>
+
                 </f:content>
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
+            <VBox id="id.MainContent" justifyContent="Start" alignItems="Start">
+                <List
+                        items="{
+                      path: 'galaxies>/value',
+                      sorter: { path: 'distance', descending: false }
+                    }">
+                    <items>
+                        <StandardListItem
+                                title="{galaxies>name}"
+                                description="distance: {galaxies>distance} lightyears"
+                                type="Navigation"
+                                press="onListItemPress">
+                            <customData>
+                                <core:CustomData key="GalaxyId" value="{galaxies>ID}" />
+                            </customData>
+                        </StandardListItem>
+                    </items>
+                </List>
+            </VBox>
         </f:content>
     </f:DynamicPage>
 </mvc:View>

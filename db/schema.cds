@@ -15,6 +15,7 @@ entity Galaxies : cuid {
     mostCommonPlanetType    :   Association to PlanetTypes;
     mostLikelyAlienType     :   Association to AlienTypes;
     explorationReport       :   String;
+
 }
 
 entity PlanetTypes  : cuid {
